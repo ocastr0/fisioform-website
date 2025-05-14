@@ -1,0 +1,130 @@
+/* 
+ * FisioForm - Pilates Studio
+ * Estilos Responsivos
+ */
+
+/* Extra small devices (phones, menos que 576px) */
+@media (max-width: 575.98px) {
+    .hero-section {
+        min-height: 500px;
+        height: auto;
+        padding: 120px 0 60px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .location {
+        font-size: 1rem;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .specs-container {
+        flex-direction: column;
+    }
+    
+    .spec-item {
+        margin-bottom: 1rem;
+    }
+    
+    .filter-buttons .btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-section {
+        min-height: 550px;
+        height: auto;
+        padding: 120px 0 60px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-section {
+        min-height: 600px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+}
+
+/* Classes utilitárias para responsividade */
+.w-xs-100 {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .w-sm-auto {
+        width: auto !important;
+    }
+}
+
+/* Ajustes de texto responsivos */
+@media (max-width: 767.98px) {
+    .text-md-center {
+        text-align: center !important;
+    }
+    
+    .gallery-filter .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .gallery-filter .btn-group .btn {
+        border-radius: 0.25rem !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Ajustes para o menu mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--white);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        margin-top: 0.5rem;
+    }
+    
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-nav .btn {
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Ajustes para o rodapé em telas pequenas */
+@media (max-width: 767.98px) {
+    .footer {
+        text-align: center;
+    }
+    
+    .footer .social-links {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+}
