@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - FisioForm Pilates Studio</title>
+    <meta name="description" content="Conheça nosso estúdio de pilates e fisioterapia através de imagens das instalações e equipamentos.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Cabeçalho com Navegação Fixa (igual à página inicial) -->
+    <header class="fixed-top">
+        <!-- Mesmo conteúdo do header na index.html -->
+    </header>
+
+    <!-- Hero Section Reduzido -->
+    <div class="hero-section hero-small" style="background-image: url('assets/img/gallery-hero.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <h1 class="display-4 fw-bold text-white">NOSSA GALERIA</h1>
+                    <p class="text-white mb-0">Conheça nosso espaço e equipamentos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtros da Galeria -->
+    <section class="gallery-filter py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="btn-group filter-buttons" role="group" aria-label="Filtros de galeria">
+                    <button type="button" class="btn btn-outline-primary active" data-filter="all">Todas</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="studio">Estúdio</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="equipment">Equipamentos</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="classes">Aulas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Imagens -->
+    <section class="gallery-section pb-5">
+        <div class="container">
+            <div class="row g-4" id="gallery-container">
+                <!-- Estúdio -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item studio">
+                    <a href="assets/img/gallery/gallery-1.jpg" data-lightbox="gallery" data-title="Recepção do Estúdio">
+                        <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
+                            <img src="assets/img/gallery/gallery-1.jpg" class="card-img-top img-fluid" alt="Recepção do Estúdio">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="p-3 bg-white bg-opacity-75 rounded-3 w-100">
+                                    <h5 class="card-title mb-0">Recepção</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item studio">
+                    <a href="assets/img/gallery/gallery-2.jpg" data-lightbox="gallery" data-title="Sala Principal">
+                        <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
+                            <img src="assets/img/gallery/gallery-2.jpg" class="card-img-top img-fluid" alt="Sala Principal">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="p-3 bg-white bg-opacity-75 rounded-3 w-100">
+                                    <h5 class="card-title mb-0">Sala Principal</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Equipamentos -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item equipment">
+                    <a href="assets/img/gallery/gallery-3.jpg" data-lightbox="gallery" data-title="Reformer">
+                        <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
+                            <img src="assets/img/gallery/gallery-3.jpg" class="card-img-top img-fluid" alt="Reformer">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="p-3 bg-white bg-opacity-75 rounded-3 w-100">
+                                    <h5 class="card-title mb-0">Reformer</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Mais itens da galeria (12-15 imagens total) -->
+                <!-- ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="display-5 mb-4">Venha conhecer nosso espaço</h2>
+            <p class="lead mb-4">Agende uma visita e descubra como podemos ajudar em seu bem-estar</p>
+            <a href="contato.html#agendar" class="btn btn-light btn-lg rounded-pill px-5 py-3">AGENDAR VISITA</a>
+        </div>
+    </section>
+
+    <!-- Rodapé (igual à página inicial) -->
+    <footer class="footer py-5 bg-dark text-white">
+        <!-- Mesmo conteúdo do footer na index.html -->
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Galeria JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar filtro da galeria
+            const filterButtons = document.querySelectorAll('.filter-buttons button');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover classe active de todos os botões
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Adicionar classe active ao botão clicado
+                    this.classList.add('active');
+                    
+                    // Filtrar itens da galeria
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            if (item.classList.contains(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Configuração do Lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': "Imagem %1 de %2"
+            });
+        });
+    </script>
+</body>
+</html>
