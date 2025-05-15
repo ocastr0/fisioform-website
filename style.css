@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Espaçamento para o cabeçalho fixo */
 body {
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 /* Botões personalizados */
@@ -104,7 +104,7 @@ body {
     min-height: 600px;
     display: flex;
     align-items: center;
-    margin-top: -80px; /* Compensar o header fixo */
+    margin-top: -100px; /* Compensar o header fixo */
     padding-top: 80px; /* Espaço para o header fixo */
     z-index: 1;
 }
@@ -129,6 +129,7 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     word-wrap: break-word;
     hyphens: auto;
+    margin-top: 0;
 }
 
 .hero-section .location {
