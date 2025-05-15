@@ -102,7 +102,6 @@ body {
     min-height: 600px;
     display: flex;
     align-items: center;
-    margin-top: -80px; /* Compensar o header fixo */
     padding-top: 80px; /* Espaço para o header fixo */
     z-index: 1;
 }
