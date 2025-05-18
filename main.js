@@ -14,8 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar smooth scroll para links âncora
     initSmoothScroll();
     
-    // Inicializar cálculo de IMC
-    initBMICalculator();
+    // Inicializar filtros da galeria
+    initGalleryFilters();
+    
+    // Tratamento de erro para imagens
+    handleImageErrors();
 });
 
 /**
@@ -82,63 +85,93 @@ function initSmoothScroll() {
 }
 
 /**
- * Inicializa a calculadora de IMC
+ * Inicializa os filtros da galeria
  */
-function initBMICalculator() {
-    const bmiForm = document.getElementById('bmi-form');
-    if (!bmiForm) return;
+function initGalleryFilters() {
+    const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
     
-    bmiForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    if (!filterButtons.length || !galleryItems.length) return;
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remover classe active de todos os botões
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-outline-primary');
+            });
+            
+            // Adicionar classe active ao botão clicado
+            this.classList.add('active');
+            this.classList.add('btn-primary');
+            this.classList.remove('btn-outline-primary');
+            
+            // Filtrar itens da galeria
+            const filter = this.getAttribute('data-filter');
+            
+            galleryItems.forEach(item => {
+                if (filter === 'todas' || filter === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+}
+
+/**
+ * Tratamento para imagens que não carregam
+ */
+function handleImageErrors() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            console.log('Erro ao carregar imagem:', this.src);
+            // Substitui com uma imagem padrão ou placeholder
+            this.src = 'assets/img/placeholder.jpg';
+            this.alt = 'Imagem temporariamente indisponível';
+        });
+    });
+}
+
+/**
+ * Validação do formulário de contato
+ */
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
         
-        const weight = parseFloat(document.getElementById('weight').value);
-        const height = parseFloat(document.getElementById('height').value) / 100; // Converter para metros
+        // Aqui você adicionaria a lógica para enviar o formulário
+        // Por enquanto, apenas exibimos uma mensagem de sucesso
         
-        if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
-            alert('Por favor, insira valores válidos para peso e altura.');
-            return;
-        }
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
         
-        // Cálculo do IMC
-        const bmi = weight / (height * height);
-        const bmiRounded = bmi.toFixed(1);
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
         
-        // Determinação da categoria
-        let category, color;
-        if (bmi < 18.5) {
-            category = 'Abaixo do peso';
-            color = 'text-info';
-        } else if (bmi < 25) {
-            category = 'Peso normal';
-            color = 'text-success';
-        } else if (bmi < 30) {
-            category = 'Sobrepeso';
-            color = 'text-warning';
-        } else {
-            category = 'Obesidade';
-            color = 'text-danger';
-        }
-        
-        // Exibir o resultado
-        const resultElement = document.getElementById('bmi-result');
-        resultElement.innerHTML = `
-            <div class="text-center">
-                <h3 class="display-1 ${color} fw-bold">${bmiRounded}</h3>
-                <p class="lead ${color} fw-bold">${category}</p>
-                <div class="progress mt-3 mb-3">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="row g-0 text-center small">
-                    <div class="col-3 text-info">Abaixo</div>
-                    <div class="col-3 text-success">Normal</div>
-                    <div class="col-3 text-warning">Sobrepeso</div>
-                    <div class="col-3 text-danger">Obesidade</div>
-                </div>
-                <p class="mt-4">O IMC é apenas uma medida inicial. Para uma avaliação completa, consulte um profissional de saúde.</p>
-            </div>
-        `;
+        setTimeout(() => {
+            const successMessage = document.createElement('div');
+            successMessage.className = 'alert alert-success mt-3';
+            successMessage.innerHTML = '<strong>Mensagem enviada com sucesso!</strong> Entraremos em contato em breve.';
+            
+            contactForm.reset();
+            contactForm.parentNode.insertBefore(successMessage, contactForm.nextSibling);
+            
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalText;
+            
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        }, 1500);
     });
 }

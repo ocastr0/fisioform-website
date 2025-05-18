@@ -15,18 +15,51 @@
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho com Navegação Fixa (igual à página inicial) -->
+    <!-- Cabeçalho com Navegação Fixa -->
     <header class="fixed-top">
-        <!-- Mesmo conteúdo do header na index.html -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" alt="FisioForm Logo" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicos.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary rounded-pill px-4" href="contato.html#agendar">AGENDE AGORA</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section Reduzido -->
-    <div class="hero-section hero-small" style="background-image: url('assets/img/gallery-hero.jpg');">
+    <div class="hero-section hero-small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10">
@@ -42,10 +75,10 @@
         <div class="container">
             <div class="text-center mb-5">
                 <div class="btn-group filter-buttons" role="group" aria-label="Filtros de galeria">
-                    <button type="button" class="btn btn-outline-primary active" data-filter="all">Todas</button>
-                    <button type="button" class="btn btn-outline-primary" data-filter="studio">Estúdio</button>
-                    <button type="button" class="btn btn-outline-primary" data-filter="equipment">Equipamentos</button>
-                    <button type="button" class="btn btn-outline-primary" data-filter="classes">Aulas</button>
+                    <button type="button" class="btn btn-primary" data-filter="all">Todas</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="estudio">Estúdio</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="equipamentos">Equipamentos</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="aulas">Aulas</button>
                 </div>
             </div>
         </div>
@@ -56,7 +89,7 @@
         <div class="container">
             <div class="row g-4" id="gallery-container">
                 <!-- Estúdio -->
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item studio">
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item estudio">
                     <a href="assets/img/gallery/gallery-1.jpg" data-lightbox="gallery" data-title="Recepção do Estúdio">
                         <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
                             <img src="assets/img/gallery/gallery-1.jpg" class="card-img-top img-fluid" alt="Recepção do Estúdio">
@@ -69,7 +102,7 @@
                     </a>
                 </div>
                 
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item studio">
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item estudio">
                     <a href="assets/img/gallery/gallery-2.jpg" data-lightbox="gallery" data-title="Sala Principal">
                         <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
                             <img src="assets/img/gallery/gallery-2.jpg" class="card-img-top img-fluid" alt="Sala Principal">
@@ -83,7 +116,7 @@
                 </div>
                 
                 <!-- Equipamentos -->
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item equipment">
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item equipamentos">
                     <a href="assets/img/gallery/gallery-3.jpg" data-lightbox="gallery" data-title="Reformer">
                         <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
                             <img src="assets/img/gallery/gallery-3.jpg" class="card-img-top img-fluid" alt="Reformer">
@@ -96,8 +129,47 @@
                     </a>
                 </div>
                 
-                <!-- Mais itens da galeria (12-15 imagens total) -->
-                <!-- ... -->
+                <!-- Aulas -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item aulas">
+                    <a href="assets/img/gallery/gallery-4.jpg" data-lightbox="gallery" data-title="Aula de Pilates">
+                        <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
+                            <img src="assets/img/gallery/gallery-4.jpg" class="card-img-top img-fluid" alt="Aula de Pilates">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="p-3 bg-white bg-opacity-75 rounded-3 w-100">
+                                    <h5 class="card-title mb-0">Aula de Pilates</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Equipamentos -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item equipamentos">
+                    <a href="assets/img/gallery/gallery-5.jpg" data-lightbox="gallery" data-title="Cadillac">
+                        <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
+                            <img src="assets/img/gallery/gallery-5.jpg" class="card-img-top img-fluid" alt="Cadillac">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="p-3 bg-white bg-opacity-75 rounded-3 w-100">
+                                    <h5 class="card-title mb-0">Cadillac</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Estúdio -->
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item estudio">
+                    <a href="assets/img/gallery/gallery-6.jpg" data-lightbox="gallery" data-title="Área de Avaliação">
+                        <div class="card border-0 rounded-4 shadow-sm hover-card overflow-hidden h-100">
+                            <img src="assets/img/gallery/gallery-6.jpg" class="card-img-top img-fluid" alt="Área de Avaliação">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div class="p-3 bg-white bg-opacity-75 rounded-3 w-100">
+                                    <h5 class="card-title mb-0">Área de Avaliação</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -111,9 +183,49 @@
         </div>
     </section>
 
-    <!-- Rodapé (igual à página inicial) -->
+    <!-- Rodapé -->
     <footer class="footer py-5 bg-dark text-white">
-        <!-- Mesmo conteúdo do footer na index.html -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="assets/img/logo-white.png" alt="FisioForm Logo" height="60" class="mb-4">
+                    <p>Tratamentos personalizados para bem-estar e qualidade de vida, com uma equipe dedicada e instalações modernas.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">Contato</h4>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Av. Paulista, 1000 - São Paulo, SP</p>
+                    <p><i class="fas fa-phone me-2"></i> (11) 5555-5555</p>
+                    <p><i class="fas fa-envelope me-2"></i> contato@fisioform.com.br</p>
+                    <p><i class="fas fa-clock me-2"></i> Seg-Sex: 7h às 21h | Sáb: 8h às 14h</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Links Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="servicos.html" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="galeria.html" class="text-white text-decoration-none">Galeria</a></li>
+                        <li class="mb-2"><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
+                        <li class="mb-2"><a href="contato.html" class="text-white text-decoration-none">Contato</a></li>
+                        <li><a href="contato.html#agendar" class="text-white text-decoration-none">Agende uma Consulta</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 FisioForm - Pilates Studio. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart text-danger"></i> por Sua Empresa</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
@@ -123,46 +235,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
-    
-    <!-- Galeria JS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Inicializar filtro da galeria
-            const filterButtons = document.querySelectorAll('.filter-buttons button');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remover classe active de todos os botões
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Adicionar classe active ao botão clicado
-                    this.classList.add('active');
-                    
-                    // Filtrar itens da galeria
-                    const filter = this.getAttribute('data-filter');
-                    
-                    galleryItems.forEach(item => {
-                        if (filter === 'all') {
-                            item.style.display = 'block';
-                        } else {
-                            if (item.classList.contains(filter)) {
-                                item.style.display = 'block';
-                            } else {
-                                item.style.display = 'none';
-                            }
-                        }
-                    });
-                });
-            });
-            
-            // Configuração do Lightbox
-            lightbox.option({
-                'resizeDuration': 200,
-                'wrapAround': true,
-                'albumLabel': "Imagem %1 de %2"
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

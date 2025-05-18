@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- Cabeçalho com Navegação Fixa -->
@@ -25,7 +24,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="logo.png" alt="FisioForm Logo" height="50">
+                    <img src="assets/img/logo.png" alt="FisioForm Logo" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,8 +77,21 @@
         </div>
     </div>
 
+    <!-- Tratamentos Personalizados -->
+    <section class="treatments-section py-5">
+        <div class="container">
+            <h2 class="text-center display-5 mb-4">Tratamentos Personalizados</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead mb-4">Na FisioForm, acreditamos que cada paciente é único e merece um programa de tratamento desenvolvido especificamente para suas necessidades.</p>
+                    <p class="mb-5">Nossa equipe de fisioterapeutas e instrutores altamente qualificados está pronta para desenvolver um plano personalizado que ajudará você a alcançar seus objetivos de saúde e bem-estar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Especificações dos Serviços -->
-    <section class="specs-section py-5">
+    <section class="specs-section py-5 bg-light">
         <div class="container">
             <div class="specs-container row text-center">
                 <div class="col-lg-3 col-md-6 spec-item mb-4">
@@ -102,23 +114,6 @@
         </div>
     </section>
 
-    <!-- Sobre Nós Resumido -->
-    <section class="about-preview py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="studio-pilates.png" alt="Interior do Studio FisioForm" class="img-fluid rounded-4 shadow">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="display-5 mb-4">Conheça a FisioForm</h2>
-                    <p class="lead">Um espaço dedicado ao seu bem-estar e saúde através de técnicas modernas de Pilates e Fisioterapia.</p>
-                    <p>Na FisioForm, acreditamos que cada corpo é único e merece uma abordagem personalizada. Nossa equipe de profissionais altamente qualificados está comprometida em fornecer tratamentos que promovam qualidade de vida e bem-estar sustentável.</p>
-                    <a href="sobre.html" class="btn btn-outline-primary rounded-pill px-4 mt-3">SAIBA MAIS</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Serviços Principais -->
     <section class="services-preview py-5">
         <div class="container">
@@ -126,31 +121,31 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 border-0 rounded-4 shadow-sm hover-card">
-                        <img src="pilates.jpg" class="card-img-top rounded-top-4" alt="Pilates">
+                        <img src="assets/img/pilates.jpg" class="card-img-top rounded-top-4" alt="Pilates">
                         <div class="card-body">
                             <h3 class="card-title h4">Pilates Clássico</h3>
                             <p class="card-text">Fortaleça seu core, melhore a postura e aumente a flexibilidade com nosso programa de Pilates personalizado.</p>
-                            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#pilatesModal">DETALHES</button>
+                            <a href="servicos.html#pilates" class="btn btn-sm btn-outline-primary rounded-pill px-3">DETALHES</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 border-0 rounded-4 shadow-sm hover-card">
-                        <img src="fisioterapia.jpg" class="card-img-top rounded-top-4" alt="Fisioterapia">
+                        <img src="assets/img/fisioterapia.jpg" class="card-img-top rounded-top-4" alt="Fisioterapia">
                         <div class="card-body">
                             <h3 class="card-title h4">Fisioterapia Ortopédica</h3>
                             <p class="card-text">Tratamentos especializados para lesões, dores crônicas e recuperação pós-cirúrgica com técnicas avançadas.</p>
-                            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#fisioModal">DETALHES</button>
+                            <a href="servicos.html#fisioterapia" class="btn btn-sm btn-outline-primary rounded-pill px-3">DETALHES</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100 border-0 rounded-4 shadow-sm hover-card">
-                        <img src="rpg.jpg" class="card-img-top rounded-top-4" alt="RPG">
+                        <img src="assets/img/rpg.jpg" class="card-img-top rounded-top-4" alt="RPG">
                         <div class="card-body">
                             <h3 class="card-title h4">RPG</h3>
                             <p class="card-text">Reeducação Postural Global para corrigir desequilíbrios musculares e melhorar a postura de forma duradoura.</p>
-                            <button class="btn btn-sm btn-outline-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#rpgModal">DETALHES</button>
+                            <a href="servicos.html#rpg" class="btn btn-sm btn-outline-primary rounded-pill px-3">DETALHES</a>
                         </div>
                     </div>
                 </div>
@@ -161,188 +156,21 @@
         </div>
     </section>
 
-    <!-- Seção de Dicas de Saúde -->
-    <section class="health-tips py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center display-5 mb-5">Dicas de Saúde e Bem-estar</h2>
-            <div class="row" id="exercise-tips">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm health-tip-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                                    <i class="fas fa-heart text-primary"></i>
-                                </div>
-                                <h3 class="card-title h5 mb-0">Benefícios do Pilates</h3>
-                            </div>
-                            <p class="card-text">O Pilates melhora a flexibilidade, aumenta a força muscular e tonifica os músculos abdominais, lombares, quadris e glúteos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm health-tip-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                                    <i class="fas fa-spa text-primary"></i>
-                                </div>
-                                <h3 class="card-title h5 mb-0">Respiração Correta</h3>
-                            </div>
-                            <p class="card-text">A respiração adequada durante os exercícios melhora a oxigenação, reduz o estresse e aumenta a concentração e consciência corporal.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm health-tip-card">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                                    <i class="fas fa-brain text-primary"></i>
-                                </div>
-                                <h3 class="card-title h5 mb-0">Saúde Mental</h3>
-                            </div>
-                            <p class="card-text">A prática regular de Pilates ajuda no gerenciamento do estresse e relaxamento, melhorando o bem-estar mental e a qualidade do sono.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculadora de IMC -->
-    <section class="bmi-calculator py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="display-5 mb-4">Calculadora de IMC</h2>
-                    <p>O Índice de Massa Corporal (IMC) é uma medida que pode ajudar a avaliar se você está em um peso saudável para sua altura.</p>
-                    <form id="bmi-form" class="mt-4">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="weight" class="form-label">Peso (kg)</label>
-                                <input type="number" class="form-control rounded-pill" id="weight" min="30" max="300" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="height" class="form-label">Altura (cm)</label>
-                                <input type="number" class="form-control rounded-pill" id="height" min="100" max="250" required>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary rounded-pill px-4 mt-3">CALCULAR</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card border-0 rounded-4 shadow">
-                        <div class="card-body p-4">
-                            <h3 class="h4 mb-4">Seu Resultado</h3>
-                            <div id="bmi-result">
-                                <p class="text-center text-muted">Preencha os campos ao lado para calcular seu IMC</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Depoimentos -->
-    <section class="testimonials py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center display-5 mb-5">O Que Nossos Clientes Dizem</h2>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card border-0 rounded-4 shadow-sm p-4">
-                            <div class="d-flex mb-3">
-                                <div class="text-warning">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <p class="lead">"As sessões de Pilates na FisioForm transformaram minha vida. Depois de anos sofrendo com dores nas costas, finalmente encontrei alívio e melhorei minha postura significativamente."</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img src="client1.jpg" class="rounded-circle me-3" width="60" height="60" alt="Cliente">
-                                <div>
-                                    <h5 class="mb-0">Mariana Silva</h5>
-                                    <p class="text-muted mb-0">Cliente há 1 ano</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card border-0 rounded-4 shadow-sm p-4">
-                            <div class="d-flex mb-3">
-                                <div class="text-warning">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <p class="lead">"A equipe da FisioForm é excepcional. Após minha cirurgia no joelho, o tratamento de fisioterapia me ajudou a recuperar completamente os movimentos e voltar às minhas atividades normais."</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img src="client2.jpg" class="rounded-circle me-3" width="60" height="60" alt="Cliente">
-                                <div>
-                                    <h5 class="mb-0">Carlos Mendes</h5>
-                                    <p class="text-muted mb-0">Cliente há 6 meses</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card border-0 rounded-4 shadow-sm p-4">
-                            <div class="d-flex mb-3">
-                                <div class="text-warning">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <p class="lead">"As aulas de RPG mudaram minha postura completamente. O ambiente é acolhedor e os profissionais são extremamente capacitados e atenciosos."</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <img src="client3.jpg" class="rounded-circle me-3" width="60" height="60" alt="Cliente">
-                                <div>
-                                    <h5 class="mb-0">Juliana Costa</h5>
-                                    <p class="text-muted mb-0">Cliente há 2 anos</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
     <!-- Chamada para Ação -->
-    <section class="cta-section py-5 text-white">
+    <section class="cta-section py-5 bg-primary text-white">
         <div class="container text-center">
-            <h2 class="display-5 mb-4">Transforme sua saúde com métodos comprovados</h2>
-            <p class="lead mb-4">Nossos especialistas estão prontos para desenvolver um plano personalizado para suas necessidades</p>
-            <a href="contato.html#agendar" class="btn btn-light btn-lg rounded-pill px-5 py-3">AGENDE SUA AVALIAÇÃO</a>
+            <h2 class="display-5 mb-4">Venha conhecer nosso espaço</h2>
+            <p class="lead mb-4">Agende uma visita e descubra como podemos ajudar em seu bem-estar</p>
+            <a href="contato.html#agendar" class="btn btn-light btn-lg rounded-pill px-5 py-3">AGENDAR VISITA</a>
         </div>
     </section>
 
     <!-- Rodapé -->
-    <footer class="footer py-5 text-white">
+    <footer class="footer py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="logo-white.png" alt="FisioForm Logo" height="60" class="mb-4">
+                    <img src="assets/img/logo-white.png" alt="FisioForm Logo" height="60" class="mb-4">
                     <p>Tratamentos personalizados para bem-estar e qualidade de vida, com uma equipe dedicada e instalações modernas.</p>
                     <div class="social-links mt-4">
                         <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
@@ -382,44 +210,10 @@
         </div>
     </footer>
 
-    <!-- Modais -->
-    <div class="modal fade" id="pilatesModal" tabindex="-1" aria-labelledby="pilatesModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-4">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="pilatesModalLabel">Pilates Clássico</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="pilates-detail.jpg" class="img-fluid rounded-4 mb-4" alt="Pilates">
-                    <h4>Sobre o Pilates</h4>
-                    <p>O método Pilates é um sistema de exercícios desenvolvido por Joseph Pilates que enfatiza o desenvolvimento dos músculos estabilizadores do tronco para melhorar o equilíbrio geral do corpo, a força, a flexibilidade e a postura.</p>
-                    <h4>Benefícios</h4>
-                    <ul>
-                        <li>Melhora da postura e alinhamento corporal</li>
-                        <li>Fortalecimento do core e aumento da estabilidade</li>
-                        <li>Maior flexibilidade e amplitude de movimento</li>
-                        <li>Redução de tensões e dores musculares</li>
-                        <li>Prevenção de lesões</li>
-                        <li>Melhora da consciência corporal</li>
-                    </ul>
-                    <h4>Nossa Abordagem</h4>
-                    <p>Na FisioForm, oferecemos sessões de Pilates personalizadas, adaptadas às necessidades específicas de cada cliente. Utilizamos equipamentos de última geração e técnicas modernas para garantir resultados eficazes e seguros.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
-                    <a href="contato.html#agendar" class="btn btn-primary rounded-pill">Agendar Avaliação</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="main.js"></script>
-    <script src="api-integration.js"></script>
-    <script src="form-validation.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
