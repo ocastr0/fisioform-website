@@ -12,11 +12,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
     <!-- Cabeçalho com Navegação Fixa -->
@@ -56,7 +54,7 @@
     </header>
 
     <!-- Hero Section Reduzido -->
-    <div class="hero-section hero-small">
+    <div class="hero-section hero-small" style="background-image: url('assets/img/services-hero.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10">
@@ -68,29 +66,28 @@
     </div>
 
     <!-- Introdução aos Serviços -->
-    <section class="treatments-section py-5">
+    <section class="services-intro py-5">
         <div class="container">
-            <h2 class="text-center display-5 mb-4">Tratamentos Personalizados</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <p class="lead mb-4">Na FisioForm, acreditamos que cada paciente é único e merece um programa de tratamento desenvolvido especificamente para suas necessidades.</p>
-                    <p class="mb-5">Nossa equipe de fisioterapeutas e instrutores altamente qualificados está pronta para desenvolver um plano personalizado que ajudará você a alcançar seus objetivos de saúde e bem-estar.</p>
+                    <h2 class="display-5 mb-4">Tratamentos Personalizados</h2>
+                    <p class="lead">Na FisioForm, acreditamos que cada paciente é único e merece um programa de tratamento desenvolvido especificamente para suas necessidades.</p>
+                    <p>Nossa equipe de fisioterapeutas e instrutores altamente qualificados está pronta para desenvolver um plano personalizado que ajudará você a alcançar seus objetivos de saúde e bem-estar.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilates Clássico -->
-    <section id="pilates" class="service-section py-5 bg-light">
+    <!-- Serviços Principal - Pilates -->
+    <section class="service-section py-5 bg-light">
         <div class="container">
-            <div class="badge bg-primary mb-2">Principal</div>
-            <h2 class="display-5 mb-4">Pilates Clássico</h2>
-            
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="assets/img/pilates-full.jpg" alt="Pilates Studio" class="img-fluid rounded-4 shadow">
                 </div>
                 <div class="col-lg-6">
+                    <span class="badge bg-primary mb-2">Principal</span>
+                    <h2 class="display-5 mb-4">Pilates Clássico</h2>
                     <p class="lead">Fortaleça seu core, melhore sua postura e aumente sua flexibilidade com nosso programa de Pilates personalizado.</p>
                     
                     <h4 class="mt-4 mb-3">O que oferecemos:</h4>
@@ -111,17 +108,16 @@
         </div>
     </section>
 
-    <!-- Fisioterapia Ortopédica -->
-    <section id="fisioterapia" class="service-section py-5">
+    <!-- Serviços - Fisioterapia -->
+    <section class="service-section py-5">
         <div class="container">
-            <div class="badge bg-secondary mb-2">Especializado</div>
-            <h2 class="display-5 mb-4">Fisioterapia Ortopédica</h2>
-            
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="assets/img/fisioterapia-full.jpg" alt="Fisioterapia" class="img-fluid rounded-4 shadow">
                 </div>
                 <div class="col-lg-6">
+                    <span class="badge bg-secondary mb-2">Especializado</span>
+                    <h2 class="display-5 mb-4">Fisioterapia Ortopédica</h2>
                     <p class="lead">Tratamentos especializados para lesões, dores crônicas e recuperação pós-cirúrgica com técnicas avançadas.</p>
                     
                     <h4 class="mt-4 mb-3">Tratamentos para:</h4>
@@ -142,17 +138,16 @@
         </div>
     </section>
 
-    <!-- RPG -->
-    <section id="rpg" class="service-section py-5 bg-light">
+    <!-- Serviços - RPG -->
+    <section class="service-section py-5 bg-light">
         <div class="container">
-            <div class="badge bg-secondary mb-2">Especializado</div>
-            <h2 class="display-5 mb-4">Reeducação Postural Global (RPG)</h2>
-            
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="assets/img/rpg-full.jpg" alt="RPG" class="img-fluid rounded-4 shadow">
                 </div>
                 <div class="col-lg-6">
+                    <span class="badge bg-secondary mb-2">Especializado</span>
+                    <h2 class="display-5 mb-4">Reeducação Postural Global (RPG)</h2>
                     <p class="lead">Método que trabalha o corpo como um todo, corrigindo desequilíbrios musculares e melhorando a postura de forma duradoura.</p>
                     
                     <h4 class="mt-4 mb-3">Benefícios:</h4>
@@ -173,39 +168,209 @@
         </div>
     </section>
 
-    <!-- Detalhes Pilates -->
-    <section id="pilates-details" class="details-section py-5">
+    <!-- Outros Serviços (Cards) -->
+    <section class="other-services py-5">
         <div class="container">
-            <h3 class="h2 mb-4">Detalhes do Pilates</h3>
-            <p>O método Pilates é um sistema de exercícios desenvolvido por Joseph Pilates que enfatiza o desenvolvimento dos músculos estabilizadores do tronco para melhorar o equilíbrio geral do corpo, a força, a flexibilidade e a postura.</p>
-            
-            <div class="row mt-5">
-                <div class="col-md-6 mb-4">
-                    <h4>Equipamentos</h4>
-                    <ul>
-                        <li>Reformer</li>
-                        <li>Cadillac</li>
-                        <li>Chair</li>
-                        <li>Barrel</li>
-                        <li>Acessórios diversos</li>
-                    </ul>
+            <h2 class="text-center display-5 mb-5">Serviços Complementares</h2>
+            <div class="row g-4">
+                <!-- Avaliação Postural -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-3 mb-4 d-inline-block">
+                                <i class="fas fa-user-check text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="card-title h4">Avaliação Postural</h3>
+                            <p class="card-text">Análise completa da sua postura para identificar desequilíbrios e criar um plano de tratamento específico.</p>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Análise biomecânica</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Registro fotográfico</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Relatório detalhado</li>
+                            </ul>
+                            <a href="contato.html#agendar" class="btn btn-outline-primary rounded-pill px-4">AGENDAR</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <h4>Para quem é indicado</h4>
-                    <ul>
-                        <li>Pessoas com problemas posturais</li>
-                        <li>Praticantes de atividades físicas</li>
-                        <li>Gestantes</li>
-                        <li>Idosos</li>
-                        <li>Pessoas em recuperação de lesões</li>
-                        <li>Pessoas com dores crônicas</li>
-                    </ul>
+                
+                <!-- Pilates para Gestantes -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-3 mb-4 d-inline-block">
+                                <i class="fas fa-baby text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="card-title h4">Pilates para Gestantes</h3>
+                            <p class="card-text">Programa especial para gestantes que fortalece a musculatura e prepara o corpo para o parto e pós-parto.</p>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Atendimento individual</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Exercícios seguros</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Alívio de dores lombares</li>
+                            </ul>
+                            <a href="contato.html#agendar" class="btn btn-outline-primary rounded-pill px-4">AGENDAR</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fisioterapia Esportiva -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 p-3 rounded-3 mb-4 d-inline-block">
+                                <i class="fas fa-running text-primary fa-2x"></i>
+                            </div>
+                            <h3 class="card-title h4">Fisioterapia Esportiva</h3>
+                            <p class="card-text">Tratamento especializado para atletas amadores e profissionais, com foco em recuperação e prevenção de lesões.</p>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Recuperação de lesões</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Melhora de desempenho</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Prevenção de novas lesões</li>
+                            </ul>
+                            <a href="contato.html#agendar" class="btn btn-outline-primary rounded-pill px-4">AGENDAR</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Chamada para Ação -->
+    <!-- Tabela de Preços -->
+    <section class="pricing py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center display-5 mb-5">Investimento</h2>
+            <div class="card border-0 rounded-4 shadow">
+                <div class="card-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Serviço</th>
+                                    <th>Sessão Individual</th>
+                                    <th>Pacote 10 sessões</th>
+                                    <th>Pacote 20 sessões</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pilates Individual</td>
+                                    <td>R$ 150,00</td>
+                                    <td>R$ 1.350,00 <span class="badge bg-success ms-2">10% off</span></td>
+                                    <td>R$ 2.400,00 <span class="badge bg-success ms-2">20% off</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Pilates em Dupla</td>
+                                    <td>R$ 120,00</td>
+                                    <td>R$ 1.080,00 <span class="badge bg-success ms-2">10% off</span></td>
+                                    <td>R$ 1.920,00 <span class="badge bg-success ms-2">20% off</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Fisioterapia</td>
+                                    <td>R$ 180,00</td>
+                                    <td>R$ 1.620,00 <span class="badge bg-success ms-2">10% off</span></td>
+                                    <td>R$ 2.880,00 <span class="badge bg-success ms-2">20% off</span></td>
+                                </tr>
+                                <tr>
+                                    <td>RPG</td>
+                                    <td>R$ 200,00</td>
+                                    <td>R$ 1.800,00 <span class="badge bg-success ms-2">10% off</span></td>
+                                    <td>R$ 3.200,00 <span class="badge bg-success ms-2">20% off</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Avaliação Postural</td>
+                                    <td>R$ 120,00</td>
+                                    <td colspan="2">Grátis na contratação de pacotes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-center mt-4 mb-0"><small>* Valores sujeitos a alteração sem aviso prévio. Consulte condições especiais para convênios.</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perguntas Frequentes -->
+    <section class="faq py-5">
+        <div class="container">
+            <h2 class="text-center display-5 mb-5">Perguntas Frequentes</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Pergunta 1 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-4">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Preciso ter experiência para começar no Pilates?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Não, não é necessário ter experiência prévia. O Pilates é indicado para pessoas de todos os níveis de condicionamento físico. Na primeira sessão, fazemos uma avaliação completa e desenvolvemos um programa personalizado de acordo com suas necessidades e objetivos. Nossos instrutores acompanharão cada exercício, garantindo que você os execute corretamente.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pergunta 2 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-4">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Com que frequência devo fazer Pilates para ver resultados?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Para obter resultados perceptíveis, recomendamos de 2 a 3 sessões por semana. No entanto, mesmo com uma sessão semanal já é possível notar melhorias. A consistência é mais importante que a frequência. O progresso depende também de outros fatores como seu condicionamento inicial, objetivos e se você pratica outros exercícios físicos além do Pilates.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pergunta 3 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-4">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Qual a diferença entre RPG e Pilates?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    A Reeducação Postural Global (RPG) é um método terapêutico focado na correção postural através de posturas de alongamento global, trabalhando cadeias musculares completas. Já o Pilates é um sistema de exercícios que busca o fortalecimento do centro de força (core), melhora da flexibilidade e consciência corporal. Enquanto o RPG tem um enfoque mais corretivo, o Pilates tem um caráter mais preventivo e de condicionamento. Em muitos casos, os métodos são complementares.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pergunta 4 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-4">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Vocês atendem planos de saúde?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim, atendemos diversos planos de saúde para sessões de fisioterapia mediante autorização prévia. Entre em contato conosco para verificar se seu plano está na nossa lista de convênios. Para as aulas de Pilates, oferecemos condições especiais para clientes de determinados planos, mas geralmente não há cobertura direta pelos convênios.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pergunta 5 -->
+                        <div class="accordion-item border-0 shadow-sm rounded-4">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Qual roupa devo usar para as sessões?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Recomendamos roupas confortáveis que permitam movimentação livre, como leggings, shorts de malha e camisetas. Evite roupas muito largas, pois os instrutores precisam visualizar seu corpo para corrigir a postura. As sessões são realizadas sem calçados, apenas com meias antiderrapantes (que podem ser adquiridas no próprio estúdio) ou descalço, se preferir.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section py-5 bg-primary text-white">
         <div class="container text-center">
             <h2 class="display-5 mb-4">Pronto para transformar sua saúde?</h2>
@@ -263,6 +428,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
