@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Tratamento de erro para imagens
     handleImageErrors();
+    
+    // Inicializar calculadora de IMC
+    initBMICalculator();
 });
 
 /**
@@ -142,36 +145,67 @@ function handleImageErrors() {
 }
 
 /**
- * Validação do formulário de contato
+ * Inicializa a calculadora de IMC
  */
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+function initBMICalculator() {
+    const bmiForm = document.getElementById('bmi-form');
+    if (!bmiForm) return;
+    
+    bmiForm.addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        // Aqui você adicionaria a lógica para enviar o formulário
-        // Por enquanto, apenas exibimos uma mensagem de sucesso
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value) / 100; // Converter para metros
         
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
+        if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+            document.getElementById('bmi-result').innerHTML = `
+                <div class="alert alert-danger">
+                    Por favor, insira valores válidos para peso e altura.
+                </div>
+            `;
+            return;
+        }
         
-        submitButton.disabled = true;
-        submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+        // Cálculo do IMC
+        const bmi = weight / (height * height);
+        const bmiRounded = bmi.toFixed(1);
         
-        setTimeout(() => {
-            const successMessage = document.createElement('div');
-            successMessage.className = 'alert alert-success mt-3';
-            successMessage.innerHTML = '<strong>Mensagem enviada com sucesso!</strong> Entraremos em contato em breve.';
-            
-            contactForm.reset();
-            contactForm.parentNode.insertBefore(successMessage, contactForm.nextSibling);
-            
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalText;
-            
-            setTimeout(() => {
-                successMessage.remove();
-            }, 5000);
-        }, 1500);
+        // Determinação da categoria
+        let category, color;
+        if (bmi < 18.5) {
+            category = 'Abaixo do peso';
+            color = 'text-info';
+        } else if (bmi < 25) {
+            category = 'Peso normal';
+            color = 'text-success';
+        } else if (bmi < 30) {
+            category = 'Sobrepeso';
+            color = 'text-warning';
+        } else {
+            category = 'Obesidade';
+            color = 'text-danger';
+        }
+        
+        // Exibir o resultado
+        const resultElement = document.getElementById('bmi-result');
+        resultElement.innerHTML = `
+            <div class="text-center">
+                <h3 class="display-1 ${color} fw-bold">${bmiRounded}</h3>
+                <p class="lead ${color} fw-bold">${category}</p>
+                <div class="progress mt-3 mb-3">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="row g-0 text-center small">
+                    <div class="col-3 text-info">Abaixo</div>
+                    <div class="col-3 text-success">Normal</div>
+                    <div class="col-3 text-warning">Sobrepeso</div>
+                    <div class="col-3 text-danger">Obesidade</div>
+                </div>
+                <p class="mt-4">O IMC é apenas uma medida inicial. Para uma avaliação completa, consulte um profissional de saúde.</p>
+            </div>
+        `;
     });
 }
