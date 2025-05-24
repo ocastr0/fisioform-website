@@ -234,7 +234,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
-    background-color: var(--dark);
+    background-color: var(--dark) !important;
+    color: white;
+    position: relative;
+}
+
+/* Garantir que o container dentro do footer mantenha o fundo escuro */
+.footer .container {
+    background-color: var(--dark) !important;
+    color: white;
+}
+
+/* Forçar cor do texto em todos os elementos do footer */
+.footer, 
+.footer p, 
+.footer h4, 
+.footer li, 
+.footer a {
+    color: white !important;
 }
 
 .footer a {
@@ -244,6 +261,11 @@ h1, h2, h3, h4, h5, h6 {
 .footer a:hover {
     opacity: 0.8;
     text-decoration: underline !important;
+}
+
+/* HR do footer */
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .social-links a {
@@ -292,6 +314,25 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-dark);
 }
+
+/* Media query para mobile - garantir que funcione em todos os dispositivos */
+@media (max-width: 767.98px) {
+    .footer {
+        text-align: center;
+        background-color: var(--dark) !important;
+    }
+    
+    .footer .container {
+        background-color: var(--dark) !important;
+        padding: 0 15px;
+    }
+    
+    .footer .social-links {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 /* Media queries para responsividade */
 @media (max-width: 991.98px) {
